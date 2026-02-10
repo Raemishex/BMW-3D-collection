@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Collection | Select Your Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="landing-body">
+
+    <header>
+        <div class="logo">BMW <span style="color:var(--primary-color)">COLLECTION</span></div>
+    </header>
+
+    <section class="landing-section">
+        <h1 class="landing-title">CHOOSE YOUR BMW M SERIES</h1>
+        
+        <div class="car-grid">
+            
+            <div class="car-card" onclick="window.location.href='cars.html'">
+                <div class="card-bg" style="background-image: url(images/bmw-m4-csl-walpaper.jpg);"></div>
+                <div class="card-content">
+                    <h2>BMW M4 CSL</h2>
+                    <p>Competition Sport Lightweight</p>
+                    <span class="explore-btn">EXPERIENCE <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <audio class="car-audio" loop>
+                    <source src="music/Never let go of me - Baltra [Slowed_Tiktok] - RoseSenpai.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="car-card" onclick="window.location.href='m5.html'">
+                <div class="card-bg" style="background-color: #0a0a0a; background-image: url('images/BMW-M5-F90-walpaper.jpg');"></div>
+                <div class="card-content">
+                    <h2>BMW M5 F90</h2>
+                    <p>Competition</p>
+                    <span class="explore-btn">EXPERIENCE <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <audio class="car-audio" loop>
+                    <source src="music/VISION - UdieNnx & HXVSAGE (Slowed & Reverb)  Car in Space Edit - Paradox Aimon.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!-- Car 3: BMW M3 TOURING -->
+            <div class="car-card" onclick="alert('Tezliklə')">
+                <div class="card-bg" style="background-image: url('images/BMW M3 TOURING.jpeg');"></div>
+                <div class="card-content">
+                    <h2>BMW M3 TOURING</h2>
+                    <p>Coming Soon</p>
+                    <span class="explore-btn">LOCKED <i class="fas fa-lock"></i></span>
+                </div>
+                <!-- Audio for this car -->
+                <!-- USER: Put your audio file path here -->
+                <audio class="car-audio" loop>
+                    <source src="music/starly (Ultra Slowed) - LONOWN.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script src="script.js"></script>
+    <script>
+    </script>
+</body>
+</html>

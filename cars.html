@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW M4 CSL | The Ultimate Driving Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="hero-body">
+
+    <div id="video-container">
+        <div class="video-overlay"></div>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo">BMW <span style="color:var(--primary-color)">M4</span></a>
+        <nav class="nav-links">
+            <a href="cars.html" class="active">Experience</a>
+            <a href="specs.html">Specs</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+        <div class="menu-btn">
+            <i class="fas fa-bars" style="color:white; font-size:1.5rem; cursor:pointer;"></i>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        
+        <div class="bg-text"></div>
+
+        <button class="nav-arrow left" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow right" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="spec-box top-right">
+            <span class="spec-val">543 <span style="font-size:1rem">HP</span></span>
+            <span class="spec-label">Horsepower</span>
+        </div>
+        <div class="spec-box bottom-left">
+            <span class="spec-val">3.6 <span style="font-size:1rem">s</span></span>
+            <span class="spec-label">0-60 MPH</span>
+        </div>
+
+        <audio id="bg-music" loop autoplay>
+            <source src="music/Never let go of me - Baltra [Slowed_Tiktok] - RoseSenpai.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="content-overlay">
+            
+            <h1 class="model-name">M4 CSL</h1>
+            <p class="subtitle">Competition Sport Lightweight</p>
+        </div>
+
+    </section>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

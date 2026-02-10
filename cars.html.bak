@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW M4 CSL | The Ultimate Driving Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="hero-body">
+
+    <!-- Background Video Container -->
+    <div id="video-container">
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">BMW <span style="color:var(--primary-color)">M4</span></div>
+        <nav class="nav-links">
+            <a href="cars.html" class="active">Experience</a>
+            <a href="specs.html">Specs</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+        <div class="menu-btn">
+            <i class="fas fa-bars" style="color:white; font-size:1.5rem; cursor:pointer;"></i>
+        </div>
+    </header>
+
+    <!-- Main Hero Content -->
+    <section class="hero-section">
+        
+        <!-- Background Text (Decor) -->
+        <div class="bg-text"></div>
+
+        <!-- Navigation Arrows (Floating) -->
+        <button class="nav-arrow left" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow right" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Specs Floating (Decor) -->
+        <div class="spec-box top-right">
+            <span class="spec-val">543 <span style="font-size:1rem">HP</span></span>
+            <span class="spec-label">Horsepower</span>
+        </div>
+        <div class="spec-box bottom-left">
+            <span class="spec-val">3.6 <span style="font-size:1rem">s</span></span>
+            <span class="spec-label">0-60 MPH</span>
+        </div>
+
+        <!-- Bottom Content -->
+        <div class="content-overlay">
+            <div class="stripes">
+                <div class="stripe"></div>
+                <div class="stripe active"></div>
+                <div class="stripe active"></div>
+                <div class="stripe"></div>
+            </div>
+            <h1 class="model-name">M4 CSL</h1>
+            <p class="subtitle">Competition Sport Lightweight</p>
+        </div>
+
+    </section>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
