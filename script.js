@@ -1,4 +1,4 @@
-/* script.js - Seamless Background Video Logic */
+/* script.js - Car Specific Logic (M4 CSL) */
 
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const newIndex = (currentIndex - 1 + carData.files.length) % carData.files.length;
         switchVideo(newIndex);
     });
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight') {
             nextBtn.click();
@@ -86,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Throttled Scroll for video switching
     let isThrottled = false;
     window.addEventListener('wheel', (e) => {
         if (isThrottled) return;
@@ -97,108 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         isThrottled = true;
+        setTimeout(() => { isThrottled = false; }, 1000);
     });
-
-    const bgMusic = document.getElementById('bg-music');
-    if (bgMusic) {
-        const savedTime = localStorage.getItem('bgMusicTime');
-        if (savedTime) {
-            bgMusic.currentTime = parseFloat(savedTime);
-        }
-        
-        bgMusic.volume = 0.5;
-        const playPromise = bgMusic.play();
-        
-        if (playPromise !== undefined) {
-            playPromise.catch(error => {
-                console.log("Autoplay blocked. Waiting for user interaction.");
-                const startMusic = () => {
-                    bgMusic.play();
-                    document.removeEventListener('click', startMusic);
-                    document.removeEventListener('keydown', startMusic);
-                };
-                document.addEventListener('click', startMusic);
-                document.addEventListener('keydown', startMusic);
-            });
-        }
-
-        setInterval(() => {
-            if (!bgMusic.paused) {
-                localStorage.setItem('bgMusicTime', bgMusic.currentTime);
-            }
-        }, 1000);
-    }
-});
-
-
-const cursorDot = document.querySelector('.cursor-dot');
-const cursorOutline = document.querySelector('.cursor-outline');
-
-if (cursorDot && cursorOutline) {
-    window.addEventListener('mousemove', (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
-}
-
-const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
-
-if (menuBtn && navLinks) {
-    menuBtn.addEventListener('click', () => {
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.display = 'none';
-        } else {
-            navLinks.style.display = 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = 'rgba(0,0,0,0.95)';
-            navLinks.style.padding = '2rem';
-            navLinks.style.zIndex = '1000';
-        }
-    });
-}
-
-const carCards = document.querySelectorAll('.car-card');
-
-if (carCards.length > 0) {
-    carCards.forEach(card => {
-        const audio = card.querySelector('audio');
-        
-        if (audio) {
-            audio.volume = 0.5; 
-
-            card.addEventListener('mouseenter', () => {
-                audio.currentTime = 0;
-                const playPromise = audio.play();
-                
-                if (playPromise !== undefined) {
-                    playPromise.catch(error => {
-                        console.log("Audio play prevented:", error);
-                    });
-                }
-            });
-
-            card.addEventListener('mouseleave', () => {
-                audio.pause();
-                audio.currentTime = 0;
-            });
-        }
-    });
-}
-
-
-document.addEventListener('contextmenu', (e) => {
-    e.preventDefault();
 });
