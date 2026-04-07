@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMW M5 F90 | Gallery</title>
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="m5-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -22,23 +23,23 @@
     </header>
 
     <div class="page-container">
-        <h1 class="specs-title">Design <span style="color:var(--primary-color)">DETAILS</span></h1>
+        <h1 class="specs-title stagger-item" style="animation-delay: 0.1s;">Design <span style="color:var(--primary-color)">DETAILS</span></h1>
         
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/BMW-M5-Seats.png" alt="Interior Seating">
+            <div class="gallery-item stagger-item skeleton" style="animation-delay: 0.2s;">
+                <img src="images/BMW-M5-Seats.png" alt="Interior Seating" loading="lazy" width="800" height="600" onload="this.parentElement.classList.remove('skeleton')">
                 <div class="gallery-caption">M Sport Seats</div>
             </div>
-            <div class="gallery-item">
-                <img src="images/Cockpit M5.jpg" alt="Steering Wheel">
+            <div class="gallery-item stagger-item skeleton" style="animation-delay: 0.3s;">
+                <img src="images/Cockpit M5.jpg" alt="Steering Wheel" loading="lazy" width="800" height="600" onload="this.parentElement.classList.remove('skeleton')">
                 <div class="gallery-caption">Cockpit</div>
             </div>
-            <div class="gallery-item">
-                <img src="images/Laser Lights M5.png" alt="Tail Lights">
+            <div class="gallery-item stagger-item skeleton" style="animation-delay: 0.4s;">
+                <img src="images/Laser Lights M5.png" alt="Tail Lights" loading="lazy" width="800" height="600" onload="this.parentElement.classList.remove('skeleton')">
                 <div class="gallery-caption">Laser Lights</div>
             </div>
-            <div class="gallery-item">
-                <img src="images/Carbon Fiber M5.png" alt="Carbon Body">
+            <div class="gallery-item stagger-item skeleton" style="animation-delay: 0.5s;">
+                <img src="images/Carbon Fiber M5.png" alt="Carbon Body" loading="lazy" width="800" height="600" onload="this.parentElement.classList.remove('skeleton')">
                 <div class="gallery-caption">Carbon Fiber</div>
             </div>
         </div>
@@ -51,6 +52,7 @@
         <source src="music/VISION - UdieNnx & HXVSAGE (Slowed & Reverb)  Car in Space Edit - Paradox Aimon.mp3" type="audio/mpeg">
     </audio>
 
+    <script src="utils.js"></script>
     <script src="m5-script.js"></script>
 </body>
 </html>

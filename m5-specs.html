@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMW M5 F90 | Specifications</title>
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="m5-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -22,45 +23,45 @@
     </header>
 
     <div class="page-container">
-        <h1 class="specs-title">Technical <span style="color:var(--primary-color)">DATA</span></h1>
+        <h1 class="specs-title stagger-item" style="animation-delay: 0.1s;">Technical <span style="color:var(--primary-color)">DATA</span></h1>
 
         <div class="specs-grid">
-            <div class="spec-card">
+            <div class="spec-card stagger-item" style="animation-delay: 0.2s;">
                 <h3>Engine</h3>
                 <p>4.4L V8</p>
                 <span class="spec-label">TwinPower Turbo</span>
             </div>
-            <div class="spec-card">
+            <div class="spec-card stagger-item" style="animation-delay: 0.3s;">
                 <h3>Power</h3>
-                <p>617 HP</p>
+                <p><span class="counter" data-target="617">0</span> HP</p>
                 <span class="spec-label">@ 6000 RPM</span>
             </div>
-            <div class="spec-card">
+            <div class="spec-card stagger-item" style="animation-delay: 0.4s;">
                 <h3>Torque</h3>
-                <p>553 LB-FT</p>
+                <p><span class="counter" data-target="553">0</span> LB-FT</p>
                 <span class="spec-label">@ 1800-5860 RPM</span>
             </div>
-            <div class="spec-card">
+            <div class="spec-card stagger-item" style="animation-delay: 0.5s;">
                 <h3>Acceleration</h3>
-                <p>3.1 Seconds</p>
+                <p><span class="counter" data-target="3.1" data-decimals="1">0</span> Seconds</p>
                 <span class="spec-label">0-60 MPH</span>
             </div>
-            <div class="spec-card">
+            <div class="spec-card stagger-item" style="animation-delay: 0.6s;">
                 <h3>Top Speed</h3>
-                <p>190 MPH</p>
+                <p><span class="counter" data-target="190">0</span> MPH</p>
                 <span class="spec-label">M Driver's Package</span>
             </div>
-            <div class="spec-card">
+            <div class="spec-card stagger-item" style="animation-delay: 0.7s;">
                 <h3>Weight</h3>
-                <p>4,235 LBS</p>
+                <p><span class="counter" data-target="4235">0</span> LBS</p>
                 <span class="spec-label">Curb Weight</span>
             </div>
-            <div class="spec-card">
+            <div class="spec-card stagger-item" style="animation-delay: 0.8s;">
                 <h3>Nürburgring Time</h3>
                 <p>7:35.9</p>
                 <span class="spec-label">Official Lap Time</span>
             </div>
-             <div class="spec-card">
+             <div class="spec-card stagger-item" style="animation-delay: 0.9s;">
                 <h3>Drivetrain</h3>
                 <p>M xDrive</p>
                 <span class="spec-label">AWD with 2WD Mode</span>
@@ -75,6 +76,7 @@
         <source src="music/VISION - UdieNnx & HXVSAGE (Slowed & Reverb)  Car in Space Edit - Paradox Aimon.mp3" type="audio/mpeg">
     </audio>
 
+    <script src="utils.js"></script>
     <script src="m5-script.js"></script>
 </body>
 </html>
